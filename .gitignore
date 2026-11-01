@@ -1,0 +1,24 @@
+# Archivos de compilación
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+# Configuración local de Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+
+# Archivos temporales
+*.tmp
+*.log
+*.bak
+
+# Publicaciones locales
+publish/
+artifacts/
+
+# Archivos de configuración con credenciales
+.env
+appsettings.Local.json

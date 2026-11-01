@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestión de Estudiantes</title>
+
+    <link href="<%= ResolveUrl("~/Content/estilos.css?v=3") %>" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+        <div class="layout">
+
+            <!-- MENÚ LATERAL -->
+            <aside class="sidebar">
+
+                <div class="brand">
+                    <div class="brand-icon">GE</div>
+                    <div>
+                        <h2>Gestión</h2>
+                        <span>Estudiantes</span>
+                    </div>
+                </div>
+
+                <div class="menu-section">MENÚ PRINCIPAL</div>
+
+                    <nav class="navigation">
+
+                        <a href="<%= ResolveUrl("~/Default.aspx") %>"
+                           class='nav-link <%= Request.Url.AbsolutePath.EndsWith("/Default.aspx", StringComparison.OrdinalIgnoreCase) || Request.Url.AbsolutePath.EndsWith("/", StringComparison.Ordinal) ? "active" : "" %>'>
+
+                            <span class="nav-icon">⌂</span>
+                            Panel principal
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/Estudiantes.aspx") %>"
+                           class='nav-link <%= Request.Url.AbsolutePath.EndsWith("/Estudiantes.aspx", StringComparison.OrdinalIgnoreCase) || Request.Url.AbsolutePath.EndsWith("/EditarEstudiante.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>'>
+
+                            <span class="nav-icon">♙</span>
+                            Estudiantes
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/RegistrarEstudiante.aspx") %>"
+                           class='nav-link <%= Request.Url.AbsolutePath.EndsWith("/RegistrarEstudiante.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>'>
+
+                            <span class="nav-icon">＋</span>
+                            Registrar estudiante
+                        </a>
+
+                    </nav>
+
+
+                <div class="sidebar-footer">
+                    <div class="footer-line"></div>
+                    <span>Sistema de administración</span>
+                    <small>Versión 1.0</small>
+                </div>
+
+            </aside>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="main-area">
+
+                <header class="topbar">
+                    <div>
+                        <span class="topbar-label">SISTEMA ADMINISTRATIVO</span>
+                        <h1>Gestión de Estudiantes</h1>
+                    </div>
+
+
+                    <div class="topbar-user">
+                        <div class="topbar-user-info">
+                            <span class="topbar-user-name">
+                                <%: Context.User.Identity.Name %>
+                            </span>
+                            <span class="topbar-user-role">Usuario</span>
+                        </div>
+
+                        <a href="<%= ResolveUrl("~/CerrarSesion.aspx") %>"
+                           class="btn-cerrar-sesion">
+                            <span class="logout-icon">↪</span>
+                            Cerrar sesión
+                        </a>
+                    </div>
+
+                </header>
+
+                <section class="page-content">
+
+                    <asp:ContentPlaceHolder
+                        ID="MainContent"
+                        runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </section>
+
+                <footer class="main-footer">
+                    © 2026 Gestión de Estudiantes.
+                    Sistema de administración académica.
+                </footer>
+
+            </main>
+
+        </div>
+
+    </form>
+</body>
+</html>

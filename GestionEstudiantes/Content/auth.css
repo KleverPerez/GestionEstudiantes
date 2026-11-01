@@ -1,0 +1,138 @@
+﻿* {
+	box-sizing: border-box;
+}
+
+body.auth-body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	background: #f1f4f9;
+	font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.auth-card {
+	width: 100%;
+	max-width: 410px;
+	padding: 38px;
+	background: #ffffff;
+	border: 1px solid #e8edf4;
+	border-radius: 14px;
+	box-shadow: 0 12px 35px rgba(20, 39, 70, 0.09);
+}
+
+.auth-brand {
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+.auth-logo {
+	width: 48px;
+	height: 48px;
+	margin: 0 auto 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+	background: #3478f6;
+	color: #ffffff;
+	font-size: 23px;
+	font-weight: 700;
+}
+
+.auth-brand h1 {
+	margin: 0;
+	color: #172b4d;
+	font-size: 23px;
+	font-weight: 700;
+}
+
+.auth-brand p {
+	margin: 7px 0 0;
+	color: #8792a5;
+	font-size: 13px;
+}
+
+.auth-field {
+	margin-bottom: 21px;
+}
+
+	.auth-field label {
+		display: block;
+		margin-bottom: 8px;
+		color: #34445c;
+		font-size: 13px;
+		font-weight: 600;
+	}
+
+.auth-input {
+	width: 100%;
+	height: 46px;
+	padding: 0 13px;
+	border: 1px solid #dce3ed;
+	border-radius: 7px;
+	outline: none;
+	background: #ffffff;
+	color: #26364d;
+	font-size: 14px;
+	transition: border-color .2s, box-shadow .2s;
+}
+
+	.auth-input:focus {
+		border-color: #3478f6;
+		box-shadow: 0 0 0 3px rgba(52, 120, 246, .12);
+	}
+
+.auth-button {
+	width: 100%;
+	height: 46px;
+	margin-top: 5px;
+	border: none;
+	border-radius: 7px;
+	background: #3478f6;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background .2s;
+}
+
+	.auth-button:hover {
+		background: #2564d8;
+	}
+
+.auth-message {
+	display: block;
+	margin-top: 15px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.auth-link {
+	display: block;
+	margin-top: 25px;
+	padding-top: 20px;
+	border-top: 1px solid #edf0f5;
+	color: #3478f6;
+	font-size: 13px;
+	text-align: center;
+	text-decoration: none;
+}
+
+	.auth-link:hover {
+		text-decoration: underline;
+	}
+
+.auth-validator {
+	display: block;
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+@media (max-width: 480px) {
+	.auth-card {
+		padding: 28px 22px;
+	}
+}
